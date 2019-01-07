@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<title>agenturro | Home</title>
+</head>
+
+<body>
+	<div class="logo">
+		<img src="img/logo.png" alt="logo">
+	</div>
+	<div class="header">
+		<div class="container">
+			<h1 class="header__text">Agenturen – Digital, Marketing, Affiliate–wir sind
+				Ihre on-demand Partner
+			</h1>
+			<div class="header__proposition">
+				<p class="header__proposition__text">Unsere Leistungen:</p>
+				<div class="header__proposition__list">
+					<div class="header__proposition__list__item" id="item-1">
+						<img src="img/monitor.png" alt="monitor">
+						<p class="header__proposition__list__item__title">PSD to HTML</p>
+						<a href="drugdrop.html" class="header__proposition__list__item__link">Bestellen</a>
+						<a href="drugdrop.html" class="header__proposition__list__item__more">
+							mehr info</a>
+					</div>
+					<div class="header__proposition__list__item" id="item-2">
+						<img src="SVG/wordpress-logo.svg" alt="monitor">
+						<p class="header__proposition__list__item__title">PSD to Wordpress</p>
+						<a href="drugdrop.html" class="header__proposition__list__item__link">Bestellen</a>
+						<a href="drugdrop.html" class="header__proposition__list__item__more">
+							mehr info</a>
+					</div>
+					<div class="header__proposition__list__item" id="item-3">
+						<img src="SVG/email.svg" alt="monitor">
+						<p class="header__proposition__list__item__title">PSD to Email</p>
+						<a href="drugdrop.html" class="header__proposition__list__item__link">Bestellen</a>
+						<a href="drugdrop.html" class="header__proposition__list__item__more">
+							mehr info</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main class="main">
+		<div class="container">
+			<div class="main__content">
+				<div class="main__content__article">
+					<h2 class="main__content__article__header">
+						Front-end Entwicklung<br>
+						PSD zu HTML
+					</h2>
+					<p class="main__content__article__text">
+						PSD / Sketch zu HTML umsetzung Dienstleistungen. Wir machen aus Ihrem
+						Design den perfekt
+						integrierten, Responsive und voll funktionsfähigen, vollständig
+						optimierten Code.
+						<br>
+						Bootstrap-basierte Projekte, arbeiten mit Retina-ready Designs und
+						vielvachen JavaScript Bibliotheken.
+					</p>
+					<button class="main__content__article__button" onclick="location.href='drugdrop.html';">
+						<p>bestellen</p> <img src="img/arrow.png" alt="">
+					</button>
+				</div>
+				<div class="main__content__image">
+					<img src="SVG/undraw_pair_programming_njlp.svg" alt="">
+				</div>
+			</div>
+			<div class="main__content">
+				<div class="main__content__article">
+					<h2 class="main__content__article__header">
+						CMS-basiert Entwicklung
+						<br>
+						PSD zu WordPressg
+					</h2>
+					<p class="main__content__article__text">
+						Wir werden auf Grund Ihrer Bedürfnisse ein einzigartiges WordPress-Thema
+						für Sie kreieren. Wir werden die Optionen des
+						Themas anpassen und dabei das responsive Design anwenden, damit Ihre
+						Webseite für alle Mobilgeräte anwendbar wird. Wir
+						werden ein maßgeschneidertes Plugin für Wordpress kreieren das Ihre
+						Anforderungen befriedigen wird.
+					</p>
+					<button class="main__content__article__button" onclick="location.href='drugdrop.html';">
+						<p>bestellen</p> <img src="img/arrow.png" alt="">
+					</button>
+				</div>
+				<div class="main__content__image">
+					<img src="SVG/undraw_content_vbqo.svg" alt="">
+				</div>
+			</div>
+			<div class="main__content">
+				<div class="main__content__article">
+					<h2 class="main__content__article__header">
+						E-Mail Templates<br>
+						PSD zu E-Mail
+					</h2>
+					<p class="main__content__article__text">
+						We code bulletproof cross-platform templates
+						tested on 12 real devices and 37 email clients
+						for your email marketing needs.
+						Next day delivery guaranteed.
+					</p>
+					<button class="main__content__article__button" onclick="location.href='drugdrop.html';">
+						<p>bestellen</p> <img src="img/arrow.png" alt="">
+					</button>
+				</div>
+				<div class="main__content__image">
+					<img src="SVG/undraw_newsletter_vovu.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="describe">
+		<div class="container">
+			<h2>Vertrauliche Abmachungen</h2>
+			<p>Unser Team im PopArt Studio sucht nach Langzeitbeziehungen. Dokumente die
+				Sie und Ihre Kunden an uns senden werden ein
+				Geschäftsgeheimnis bleiben. Wir werden Ihre Kunden nicht kontaktieren, es
+				sei denn Sie sagen uns wir sollen es machen.
+				Die Vertraulichkeit ist garantiert.
+			</p>
+			<button class="describe__button" onclick="location.href='drugdrop.html';">
+				<p>jetzt Ihre
+					Projekt bewerten</p><img src="img/arrow.png" alt="">
+			</button>
+		</div>
+	</div>
+</body>
+<footer class="footer">
+	<p>Impressum</p>
+</footer>
+<script type="text/javascript">
+	var item1 = document.getElementById("item-1");
+	var item2 = document.getElementById("item-2");
+	var item3 = document.getElementById("item-3");
+	item1.onmouseover = function () {
+		item2.style.opacity = '0.3';
+		item3.style.opacity = '0.3'
+	}
+	item1.onmouseout = function () {
+		item2.style.opacity = '1';
+		item3.style.opacity = '1'
+	}
+	item2.onmouseover = function () {
+		item1.style.opacity = '0.3';
+		item3.style.opacity = '0.3'
+	}
+	item2.onmouseout = function () {
+		item1.style.opacity = '1';
+		item3.style.opacity = '1'
+	}
+	item3.onmouseover = function () {
+		item2.style.opacity = '0.3';
+		item1.style.opacity = '0.3'
+	}
+	item3.onmouseout = function () {
+		item2.style.opacity = '1';
+		item1.style.opacity = '1'
+	}
+</script>
+
+</html>

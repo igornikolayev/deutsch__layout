@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<title>agenturro| Files</title>
+</head>
+
+<body>
+	<div class="logo">
+		<img src="img/logo.png" alt="logo">
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="header-text-container">
+				<a href="index.html">
+					<img src="SVG/arrow-pointing-to-right.svg" alt="">
+				</a>
+				<h1 class="header__text drag-header">Front-end Entwicklung</h1>
+			</div>
+			<div class="header__proposition">
+				<p class="header__proposition__text drag-text">Designs Upload</p>
+			</div>
+		</div>
+		<div class="border"></div>
+	</div>
+	<main class="main-drag">
+		<div class="container">
+			<form id="upload" class="main__field" action="drugdrop.html" method="POST" enctype="multipart/form-data">
+
+				<label class="main__field-button" for="fileselect">
+					<input type="file" id="fileselect" name="fileselect[]" multiple="multiple">
+					<img src="img/plus.png" alt="">
+				</label>
+				<div class="main__field__img" id="filedrag">
+
+				</div>
+				<p>Legen Sie Ihre Designs hier ab</p>
+			</form>
+			<div id="messages" class="message__field">
+				{{Init}}
+				<div v-for="(item1, i) in name" :key="item1.id">
+					<div class="main__field__out">
+						<button class="main__field__out__delete" @click="deletes(item1.id)">
+							<p class="main__field__out__delete-text">loschen</p>
+						</button>
+						<h2>{{type[i]}}</h2>
+						<h5>{{item1}} <br>
+							{{size[i]}} MB </h5>
+					</div>
+				</div>
+			</div>
+			<div class="main__url">
+				<p class="main__url__header">Wenn Ihre Dateien online sind, geben Sie Links
+					zu ihnen ein</p>
+				<div class="main__url__fields" id="input_url">
+					<div class="main__url__field">
+						<input type="text" id="input-field" placeholder="URL zur Google Drive,
+								WeTransfer, etc." />
+						<div class="main__url__field__img">
+						</div>
+						{{but}}
+						<button class="main__url__field__button" @click="addNewUrl">
+							<img src="img/plus-blue.png" alt="">
+						</button>
+					</div>
+					<div class="main__url__field" v-for="(item, i) in inputUrl" :key="item.id">
+						<p>{{item}}</p>
+						</output>
+						<div class="main__url__field__img">
+						</div>
+						<button class="main__url__field__button" @click="deleteUrl(item.id)">
+							<img src="img/minus.png" alt="">
+						</button>
+					</div>
+				</div>
+			</div>
+			<button id="buttonToform" disabled class="describe__button describe__button-drag" onclick="location.href='form.html';">
+				<p> weiter</p>
+			</button>
+			<a class="main__link-back" href="index.html">Zurück</a>
+		</div>
+	</main>
+	<footer class="footer footer-file">
+		<p>Impressum</p>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		let addUrl = new Vue({
+			el: '#input_url',
+			data: {
+				inputUrl: [],
+			},
+			methods: {
+				addNewUrl() {
+
+					let val = document.getElementById("input-field").value;
+					if (val != '') this.inputUrl.push(val);
+					document.getElementById("input-field").value = '';
+				},
+				deleteUrl(index) {
+					this.inputUrl.splice(index, 1);
+				}
+			},
+			computed: {
+				but() {
+					if (this.inputUrl.length == 0) {
+						document.getElementById("buttonToform").style.opacity = "0.3"
+						document.getElementById("buttonToform").disabled = true;
+					} else {
+						document.getElementById("buttonToform").style.opacity = "1";
+						document.getElementById("buttonToform").disabled = false;
+					}
+				}
+			}
+		});
+		let addFiles = new Vue({
+			el: '#messages',
+			data: {
+				name: [],
+				size: [],
+				type: []
+			},
+			methods: {
+				deletes(i) {
+					this.name.splice(i, 1);
+				},
+				// file drag hover
+				FileDragHover(e) {
+					e.stopPropagation();
+					e.preventDefault();
+					e.target.className = (e.type == "dragover" ? "hover" : "");
+				},
+
+				// file selection
+				FileSelectHandler(e) {
+
+					// cancel event and hover styling
+					this.FileDragHover(e);
+
+					// fetch FileList object
+					var files = e.target.files || e.dataTransfer.files;
+					// process all File objects
+					for (var i = 0, f; f = files[i]; i++) {
+						this.ParseFile(f);
+
+					}
+
+				},
+
+
+				// output file information
+				ParseFile(file) {
+					this.name.push(file.name);
+					this.type.push(file.type);
+					this.size.push(file.size / 1000000);
+					document.getElementById("messages").style.border = "1px dashed #ddd";
+					document.getElementById("buttonToform").style.opacity = 1;
+				},
+
+			},
+			computed: {
+
+				Init() {
+					if (this.name.length == 0) {
+						document.getElementById("buttonToform").style.opacity = "0.3"
+						document.getElementById("buttonToform").disabled = true;
+					} else {
+						document.getElementById("buttonToform").style.opacity = "1";
+						document.getElementById("buttonToform").disabled = false;
+					}
+					var fileselect = document.getElementById("fileselect"),
+						filedrag = document.getElementById("filedrag"),
+						submitbutton = document.getElementById("submitbutton");
+					// file select
+
+					fileselect.addEventListener("change", this.FileSelectHandler, false);
+					// is XHR2 available?
+					var xhr = new XMLHttpRequest();
+					if (xhr.upload) {
+
+						// file drop
+						filedrag.addEventListener("dragover", this.FileDragHover, false);
+						filedrag.addEventListener("dragleave", this.FileDragHover, false);
+						filedrag.addEventListener("drop", this.FileSelectHandler, false);
+						filedrag.style.display = "block";
+					}
+
+				},
+			}
+		});
+	</script>
+</body>
+
+</html>

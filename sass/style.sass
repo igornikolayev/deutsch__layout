@@ -1,0 +1,414 @@
+@font-face
+  font-family: "Avenir book"
+  src: url('../fonts/Avenir-Book.ttf')
+@font-face
+  font-family: "Avenir heavy"
+  src: url('../fonts/Avenir-Heavy.ttf')
+#fileselect
+	visibility: hidden
+body, p, h1, h2
+	font-family: "Avenir book"
+	margin: 0
+	padding: 0
+	color: #6d6d6d
+button
+	cursor: pointer
+	outline: none
+button:hover
+	background: #16cbe1
+	border-color: #16cbe1
+	p
+		color: #fff
+.logo
+	margin-left: 20px
+	margin-top: 50px	
+	
+.container
+	width: 80%
+	max-width: 1600px
+	margin: auto
+.header
+	margin-top: 60px
+	text-align: center
+	&__text		
+		font-family: "Avenir heavy"
+		font-size: 55px
+		margin-bottom: 55px
+		color: #292929
+	&__proposition
+		&__text
+			font-size: 23px
+			margin-bottom: 50px
+		&__list
+			width: 78%
+			margin: auto
+			display: flex
+			flex-direction: row
+			justify-content: center
+			border-radius: 20px
+			margin-right: 100px
+			box-sizing: border-box
+			box-shadow: 20px 14px 52px -1px rgba(199,185,199,1)
+			max-height: 275px 
+			&__item
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-left: 120px
+				padding-top: 65px 	
+				padding-bottom: 55px
+				&:first-child
+					margin-left: 0px
+				img
+					max-width: 55px
+					max-height: 55px
+					margin-bottom: 30px
+				&__title
+					font-size: 20px
+					&::before 
+						content: "\2022" 
+						color: #16b9d2
+						font-weight: bold
+						display: inline-block 
+						width: 2em
+						margin-left: -2em
+				&__link
+					margin-top: 20px
+					transform:translate(9999px)
+					opacity: 0
+					font-size: 18px
+					color: #16b9d2
+					text-decoration-color: #16b9d2
+					font-family: "Avenir heavy"
+					transition: opacity 1000ms
+					
+				&__more
+					margin-top: 20px
+					display: none
+					font-size: 12px
+					color: #262626
+					text-decoration: none
+					text-decoration-color: #262626
+					transform:translate(9999px)
+					opacity: 0	
+					transition: opacity 2000ms
+					
+				&:hover
+					border-top: 3px solid #16b9d2
+					.header__proposition__list__item__link, .header__proposition__list__item__more
+						display: block
+						visibility: visible
+						opacity: 1 
+
+						
+
+.header-text-container
+	position: relative
+	display: flex
+	flex-direction: row
+	justify-content: center
+	img
+		transform: rotate(180deg)
+		max-width: 80px
+		max-height: 40px
+			
+	a
+		cursor: pointer
+		position: relative
+		left: -20px
+
+.main
+	margin-top: 150px
+.main__content
+	margin-top: 50px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	&:nth-child(2)
+		flex-direction: row-reverse
+.main__content__article
+	width: 44%	
+.main__content__article__header
+	font-size: 30px
+	line-height: 44px
+	font-family: "Avenir heavy"
+	color: #292929
+	margin-bottom: 45px
+.main__content__article__text
+	font-size: 20px
+	line-height: 27px
+	margin-bottom: 50px
+.main__content__article__button
+	background: #fff
+	padding: 10px 20px
+	border: solid
+	border-color: #16b9d2
+	border-radius: 50px
+	display: flex
+	flex-direction: row
+	p
+		margin-right: 100px 
+		font-size: 18px
+		font-family: "Avenir heavy"
+		color: #16b9d2
+
+.main__content__image
+	img
+		max-width: 430px
+.describe
+	margin-top: 100px
+	text-align: center
+	h2
+		font-size: 35px
+		font-family: "Avenir heavy"
+	p
+		margin-top: 70px
+		font-size: 20px 
+	&__button
+		margin: auto
+		margin-top: 80px
+		background: #16b9d2
+		padding: 10px 25px
+		border: none
+		border-radius: 50px
+		display: flex
+		flex-direction: row
+		align-items: center
+		p
+			color: #fff
+			font-size: 18px
+			font-family: "Avenir heavy"
+			margin: 0
+			margin-right: 100px
+		
+.footer
+	margin-top: 150px
+	font-style: 13px
+	font-family: "Open Sans"
+	text-align: right
+	margin-right: 20px
+	margin-bottom: 10px
+.border
+	background: #e8e8e8
+	height: 1px
+	margin-bottom: 50px
+	width: 100%
+.border-form
+	margin-bottom: 120px
+.drag-header
+	position: relative
+	top: -16px
+	margin-bottom: 0px	
+.main-drag
+	text-align: center
+	margin: 0
+.main__field
+	display: flex
+	flex-direction: column
+	align-items: center
+	border: 1px dashed #e8e8e8
+	border-radius: 20px
+	&-button
+		margin-top: 60px
+		background: #16b9d2
+		width: 50px
+		height: 50px
+		border-radius: 25px
+		border: none
+		position: relative
+		left: 250px
+		display: none
+		img
+			position: relative
+			top: -5px
+	&__img
+		background: url('../img/upload.jpg') no-repeat center
+		margin-top: 50px
+		margin-bottom: 20px
+		width: 270px
+		min-height: 200px 
+
+	p
+		font-size: 20px
+		margin-bottom: 60px
+.main__url
+	margin-top: 60px
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: flex-start
+	&__header
+		text-align: right
+		font-size: 20px
+		max-width: 425px
+		margin-left: 20px
+		margin-top: 18px
+	&__fields
+		display: flex
+		flex-direction: column
+	&__field
+		padding: 20px 25px
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		position: relative
+		p
+			border: none
+			padding: 10px
+			padding-left: 40px 
+			font-size: 16px
+			color: #494949
+			&:hover + .main__url__field__img
+				background: url('../img/url-blue.png') no-repeat
+				width: 20px
+				height: 20px
+			&:hover
+				color: #16b9d2
+				text-decoration: underline				
+		input
+			padding: 10px
+			padding-left: 40px 
+			font-size: 16px
+			color: #494949
+			width: 350px
+			border-radius: 15px
+			border: 1px solid #e8e8e8
+			text-decoration: none
+			outline: none
+			&:focus
+				border-color: #16b9d2
+			&:focus + .main__url__field__img
+				background: url('../img/url-blue.png') no-repeat
+				width: 20px
+				height: 20px
+
+		&__img
+			background: url('../img/url.png') no-repeat
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 30px
+			left: 35px
+		&__button
+			margin-left: 25px
+			background: #fff
+			border: none
+			&:hover
+				background: none
+.describe__button-drag
+	margin-top: 70px
+	color: #ffffff
+	width: 350px
+	text-align: center
+	display: block
+	margin-bottom:  20px
+	opacity: 0.3
+	p
+		margin: 0
+.main__link-back
+	text-decoration: none
+	color: #727272
+.footer-file
+	margin-top: 40px
+
+.main__field:hover
+	border: 2px dashed #16b9d2
+	.main__field__img
+		background: url('../SVG/undraw_upload_87y9.svg') no-repeat
+		background-size: cover
+	.main__field-button
+		display: block
+.main__form
+	width: 43%
+	margin: auto
+	font-size: 22px
+.contact__header
+	display: flex
+	flex-direction: row
+	font-family: "Avenir heavy"
+	margin-bottom: 30px
+	margin-left: 5px
+	&__image
+		position: absolute
+		margin-left: -30px
+.contact__fields
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	input
+		border: none
+		font-size: 22px
+		color: #494949
+		padding: 10px
+		margin-bottom: 25px
+		border-radius: 20px
+		outline: none  
+		&:focus
+			border: 1px solid #16b9d2
+.button-form
+	margin-top: 60px
+	padding-left: 60px
+	padding-right: 60px
+	width: 420px
+	white-space: nowrap
+
+.danke__button
+	margin: auto
+	margin-top: 10px
+	background: #16b9d2	
+	padding: 10px 100px
+	border: none
+	border-radius: 50px
+	p
+		color: #fff
+		font-size: 18px
+.danke-text
+	font-size: 20px
+	margin-top: 20px
+.danke-header
+	margin-top: 215px
+	margin-bottom: 0 
+.danke-body
+	height: 100%
+	margin: auto
+.message__field
+	margin-top: 130px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	padding: 30px
+	border-radius: 20px 
+.main__field__out
+	margin-right: 25px
+	margin-bottom: 30px
+	min-width: 170px
+	text-align: center
+	border: 1px solid #e8e8e8
+	border-radius: 20px
+	color: #6d6d6d
+	&:hover
+		border: 1px solid #16cbe1
+	&:hover 
+		h2
+			color: #292929
+	&__delete
+		background: #fff
+		border: none
+		font-size: 14px
+		margin-top: 7px
+		margin-bottom: 30px
+		&:hover
+			background: #fff
+			p
+				font-family: "Avenir heavy"
+				color: #16cbe1
+				text-decoration: underline
+	h2
+		font-size: 35px	
+		font-family: "Avenir heavy"
+		margin-bottom: 50px
+	h5
+		font-size: 14px
