@@ -36,11 +36,11 @@
                         <p class="contact__header">Kontakt</p>
                     </div>
                     <div class="contact__fields">
-                        <input onmousemove="ar()" type="text/javascript" class="contact__input" id="contact__input-1"
+                        <input onchange="ar()" type="text/javascript" class="contact__input" id="contact__input-1"
                             placeholder="Ihre Name">
-                        <input onmousemove="ar()" type="text/javascript" class="contact__input" id="contact__input-2"
+                        <input onchange="ar()" type="text/javascript" class="contact__input" id="contact__input-2"
                             placeholder="E-Mail">
-                        <input onmousemove="ar()" type="text/javascript" class="contact__input" id="contact__input-3"
+                        <input onchange="ar()" type="text/javascript" class="contact__input" id="contact__input-3"
                             placeholder="Telefonnummer">
                     </div>
                 </form>
@@ -57,10 +57,10 @@
     </footer>
     <script>
         function ar() {
-            var inputs1 = document.getElementById('contact__input-1').value;
-            var inputs2 = document.getElementById('contact__input-2').value;
-            var inputs3 = document.getElementById('contact__input-3').value;
-            var but = document.getElementById('buttonToformDanke');
+            const inputs1 = document.getElementById('contact__input-1').value;
+            const inputs2 = document.getElementById('contact__input-2').value;
+            const inputs3 = document.getElementById('contact__input-3').value;
+            const but = document.getElementById('buttonToformDanke');
             if (inputs1 != '') {
                 if (inputs2 != '') {
                     if (inputs3 != '') {

@@ -50,19 +50,17 @@ button:hover {
     margin: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     border-radius: 20px;
-    margin-right: 100px;
-    box-sizing: border-box;
-    box-shadow: 20px 14px 52px -1px #c7b9c7;
-    max-height: 275px; }
+    box-shadow: 10px 20px 35px 4px #c7b9c7; }
     .header__proposition__list__item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-left: 120px;
       padding-top: 65px;
-      padding-bottom: 55px; }
+      padding-bottom: 55px;
+      min-width: 250px; }
       .header__proposition__list__item:first-child {
         margin-left: 0px; }
       .header__proposition__list__item img {
@@ -96,7 +94,8 @@ button:hover {
         opacity: 0;
         transition: opacity 2000ms; }
       .header__proposition__list__item:hover {
-        border-top: 3px solid #16b9d2; }
+        border-top: 3px solid #16b9d2;
+        padding-bottom: 0; }
         .header__proposition__list__item:hover .header__proposition__list__item__link, .header__proposition__list__item:hover .header__proposition__list__item__more {
           display: block;
           visibility: visible;
@@ -150,15 +149,21 @@ button:hover {
   border-color: #16b9d2;
   border-radius: 50px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 230px;
+  width: 100%;
+  position: relative; }
   .main__content__article__button p {
-    margin-right: 100px;
+    margin-right: 10%;
     font-size: 18px;
     font-family: "Avenir heavy";
     color: #16b9d2; }
 
-.main__content__image img {
-  max-width: 430px; }
+.main__content__image {
+  width: 40%; }
+  .main__content__image img {
+    max-width: 100%; }
 
 .describe {
   margin-top: 100px;
@@ -178,13 +183,16 @@ button:hover {
     border-radius: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    min-width: 250px;
+    max-width: 360px; }
     .describe__button p {
       color: #fff;
       font-size: 18px;
       font-family: "Avenir heavy";
-      margin: 0;
-      margin-right: 100px; }
+      margin: 0; }
 
 .footer {
   margin-top: 150px;
@@ -226,7 +234,7 @@ button:hover {
     border-radius: 25px;
     border: none;
     position: relative;
-    left: 250px;
+    left: 23%;
     display: none; }
     .main__field-button img {
       position: relative;
@@ -235,8 +243,7 @@ button:hover {
     background: url("../img/upload.jpg") no-repeat center;
     margin-top: 50px;
     margin-bottom: 20px;
-    width: 270px;
-    min-height: 200px; }
+    background-size: 270px; }
   .main__field p {
     font-size: 20px;
     margin-bottom: 60px; }
@@ -255,7 +262,11 @@ button:hover {
     margin-top: 18px; }
   .main__url__fields {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    box-shadow: 20px 14px 52px -1px #c7b9c7;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 400px; }
   .main__url__field {
     padding: 20px 25px;
     display: flex;
@@ -263,17 +274,21 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     position: relative; }
-    .main__url__field p {
+    .main__url__field a {
+      text-align: left;
       border: none;
       padding: 10px;
       padding-left: 40px;
       font-size: 16px;
-      color: #494949; }
-      .main__url__field p:hover + .main__url__field__img {
+      color: #494949;
+      text-decoration: none;
+      max-width: 300px;
+      overflow: hidden; }
+      .main__url__field a:hover + .main__url__field__img {
         background: url("../img/url-blue.png") no-repeat;
         width: 20px;
         height: 20px; }
-      .main__url__field p:hover {
+      .main__url__field a:hover {
         color: #16b9d2;
         text-decoration: underline; }
     .main__url__field input {
@@ -309,7 +324,7 @@ button:hover {
 .describe__button-drag {
   margin-top: 70px;
   color: #ffffff;
-  width: 350px;
+  width: 32%;
   text-align: center;
   display: block;
   margin-bottom: 20px;
@@ -328,7 +343,7 @@ button:hover {
   border: 2px dashed #16b9d2; }
   .main__field:hover .main__field__img {
     background: url("../SVG/undraw_upload_87y9.svg") no-repeat;
-    background-size: cover; }
+    background-size: 270px; }
   .main__field:hover .main__field-button {
     display: block; }
 
@@ -393,7 +408,6 @@ button:hover {
   margin: auto; }
 
 .message__field {
-  margin-top: 130px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -405,6 +419,7 @@ button:hover {
   margin-right: 25px;
   margin-bottom: 30px;
   min-width: 170px;
+  max-width: 200px;
   text-align: center;
   border: 1px solid #e8e8e8;
   border-radius: 20px;
@@ -431,3 +446,370 @@ button:hover {
     margin-bottom: 50px; }
   .main__field__out h5 {
     font-size: 14px; }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%; }
+  .header {
+    margin-top: 30px;
+    text-align: center; }
+    .header__text {
+      font-family: "Avenir heavy";
+      font-size: 45px;
+      margin-bottom: 35px;
+      color: #292929; }
+    .header__proposition__text {
+      font-size: 20px;
+      margin-bottom: 40px; }
+    .header__proposition__list {
+      width: 78%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: no-wrap;
+      justify-content: center;
+      border-radius: 20px;
+      box-sizing: border-box;
+      box-shadow: 10px 15px 30px -1px #c7b9c7; }
+      .header__proposition__list__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 55px;
+        padding-bottom: 45px;
+        width: 250px;
+        margin: auto; }
+        .header__proposition__list__item:first-child {
+          margin: auto; }
+  .header-text-container img {
+    transform: rotate(180deg);
+    max-width: 60px;
+    max-height: 30px; }
+  .header-text-container a {
+    left: -17px; }
+  .main {
+    margin-top: 120px; }
+  .main__content {
+    margin-top: 40px; }
+  .main__content__article__header {
+    font-size: 28px;
+    line-height: 40px;
+    font-family: "Avenir heavy";
+    color: #292929;
+    margin-bottom: 40px; }
+  .main__content__article__text {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 40px; }
+  .describe {
+    margin-top: 90px;
+    text-align: center; }
+    .describe h2 {
+      font-size: 30px;
+      font-family: "Avenir heavy"; }
+    .describe p {
+      margin-top: 50px;
+      font-size: 18px; }
+    .describe__button p {
+      color: #fff;
+      font-size: 18px;
+      font-family: "Avenir heavy";
+      margin: 0; }
+  .footer {
+    margin-top: 120px;
+    font-size: 13px; }
+  .border {
+    background: #e8e8e8;
+    height: 1px;
+    margin-bottom: 40px;
+    width: 100%; }
+  .border-form {
+    margin-bottom: 100px; }
+  .main__field-button {
+    margin-top: 40px; }
+  .main__field__img {
+    background: url("../img/upload.jpg") no-repeat center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 240px;
+    min-height: 200px; }
+  .main__field p {
+    font-size: 18px;
+    margin-bottom: 50px; }
+  .main__url {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .main__url__header {
+      text-align: center;
+      font-size: 18px;
+      max-width: 90%;
+      margin-top: 18px;
+      margin-bottom: 20px; }
+    .main__url__fields {
+      box-shadow: 10px 15px 30px -1px #c7b9c7; }
+    .main__url__field {
+      max-width: 90%; }
+      .main__url__field p {
+        border: none;
+        padding: 10px;
+        padding-left: 40px;
+        font-size: 16px;
+        color: #494949; }
+        .main__url__field p:hover + .main__url__field__img {
+          background: url("../img/url-blue.png") no-repeat;
+          width: 20px;
+          height: 20px; }
+        .main__url__field p:hover {
+          color: #16b9d2;
+          text-decoration: underline; }
+  .main__form {
+    width: 60%;
+    margin: auto;
+    font-size: 22px; }
+  .contact__header {
+    display: flex;
+    flex-direction: row;
+    font-family: "Avenir heavy";
+    margin-bottom: 30px;
+    margin-left: 5px; }
+    .contact__header__image {
+      position: absolute;
+      margin-left: -30px; }
+  .contact__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .contact__fields input {
+      border: none;
+      font-size: 22px;
+      color: #494949;
+      padding: 10px;
+      margin-bottom: 25px;
+      border-radius: 20px;
+      outline: none; }
+      .contact__fields input:focus {
+        border: 1px solid #16b9d2; }
+  .button-form {
+    margin-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 420px;
+    white-space: nowrap; }
+  .danke__button {
+    margin: auto;
+    margin-top: 10px;
+    background: #16b9d2;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 50px; }
+    .danke__button p {
+      color: #fff;
+      font-size: 18px; }
+  .danke-text {
+    font-size: 18px;
+    margin-top: 20px; }
+  .danke-header {
+    margin-top: 175px;
+    margin-bottom: 0; } }
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%; }
+  .header {
+    margin-top: 30px;
+    text-align: center; }
+    .header__text {
+      font-size: 26px;
+      margin-bottom: 10px; }
+  .header-text-container img {
+    transform: rotate(180deg);
+    max-width: 40px;
+    max-height: 20px; }
+  .header-text-container a {
+    left: -5px;
+    top: -7px; }
+  .main {
+    margin-top: 100px; }
+  .main__content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .main__content:nth-child(2) {
+      flex-direction: column; }
+  .main__content__article {
+    margin-top: 40px;
+    width: 100%; }
+  .main__content__article__header {
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Avenir heavy";
+    color: #292929;
+    margin-bottom: 25px; }
+  .main__content__article__text {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 40px; }
+  .main__content__article__button {
+    background: #fff;
+    padding: 10px 20px;
+    border: solid;
+    border-color: #16b9d2;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 230px;
+    width: 100%;
+    position: relative;
+    top: 290px;
+    margin-left: auto;
+    margin-right: auto; }
+    .main__content__article__button p {
+      margin-right: 10%;
+      font-size: 18px;
+      font-family: "Avenir heavy";
+      color: #16b9d2; }
+  .main__content__image {
+    width: 100%;
+    position: relative;
+    top: -50px; }
+    .main__content__image img {
+      max-width: 100%; }
+  .describe {
+    margin-top: 120px;
+    text-align: center; }
+    .describe h2 {
+      font-size: 25px;
+      font-family: "Avenir heavy"; }
+    .describe p {
+      margin-top: 50px;
+      font-size: 18px; }
+    .describe__button p {
+      color: #fff;
+      font-size: 18px;
+      font-family: "Avenir heavy";
+      margin: 0; }
+  .footer {
+    margin-top: 120px;
+    font-size: 13px; }
+  .border {
+    background: #e8e8e8;
+    height: 1px;
+    margin-bottom: 40px;
+    width: 100%; }
+  .border-form {
+    margin-bottom: 100px; }
+  .main__field {
+    overflow: hidden; }
+    .main__field-button {
+      margin-top: 40px; }
+    .main__field__img {
+      background: url("../img/upload.jpg") no-repeat contain;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      background-size: 200px; }
+    .main__field p {
+      font-size: 18px;
+      margin-bottom: 50px; }
+  .main__field:hover .main__field__img {
+    background: url("../SVG/undraw_upload_87y9.svg") no-repeat;
+    background-size: 200px; }
+  .main__url {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .main__url__header {
+      text-align: center;
+      font-size: 18px;
+      max-width: 90%;
+      margin-top: 18px;
+      margin-bottom: 20px; }
+    .main__url__fields {
+      box-shadow: 6px 12px 30px 4px #c7b9c7;
+      max-width: 90%; }
+    .main__url__field {
+      max-width: 100%; }
+      .main__url__field input {
+        padding: 10px;
+        padding-left: 40px;
+        font-size: 12px;
+        color: #494949;
+        width: 200px;
+        border-radius: 15px;
+        border: 1px solid #e8e8e8;
+        text-decoration: none;
+        outline: none; }
+      .main__url__field a {
+        border: none;
+        padding: 10px;
+        padding-left: 40px;
+        font-size: 12px;
+        color: #494949; }
+        .main__url__field a:hover + .main__url__field__img {
+          background: url("../img/url-blue.png") no-repeat;
+          width: 15px;
+          height: 15px; }
+        .main__url__field a:hover {
+          color: #16b9d2;
+          text-decoration: underline; }
+  .main__form {
+    width: 70%;
+    margin: auto;
+    font-size: 18px; }
+  .contact__header {
+    display: flex;
+    flex-direction: row;
+    font-family: "Avenir heavy";
+    margin-bottom: 20px;
+    margin-left: 5px; }
+    .contact__header__image {
+      position: absolute;
+      margin-left: -30px; }
+  .contact__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .contact__fields input {
+      border: none;
+      font-size: 16px;
+      color: #494949;
+      padding: 8px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      outline: none; }
+      .contact__fields input:focus {
+        border: 1px solid #16b9d2; }
+  .button-form {
+    margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 80%;
+    white-space: nowrap;
+    text-align: center; }
+    .button-form p {
+      font-size: 15px; }
+  .danke__button {
+    margin: auto;
+    margin-top: 10px;
+    background: #16b9d2;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 50px; }
+    .danke__button p {
+      color: #fff;
+      font-size: 16px; }
+  .danke-text {
+    font-size: 16px;
+    margin-top: 20px; }
+  .danke-header {
+    margin-top: 145px;
+    margin-bottom: 0; }
+  .main__link-back {
+    font-size: 15px; } }

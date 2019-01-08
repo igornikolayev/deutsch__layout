@@ -42,15 +42,15 @@
 			</form>
 			<div id="messages" class="message__field">
 				{{Init}}
-				<div v-for="(item1, i) in name" :key="item1.id">
-					<div class="main__field__out">
-						<button class="main__field__out__delete" @click="deletes(item1.id)">
-							<p class="main__field__out__delete-text">loschen</p>
-						</button>
-						<h2>{{type[i]}}</h2>
-						<h5>{{item1}} <br>
-							{{size[i]}} MB </h5>
-					</div>
+				<div class="main__field__out" v-for="(item1, i) in name" :key="item1.id">
+					<button class="main__field__out__delete" @click="deletes(item1)">
+						<p class="main__field__out__delete-text">loschen</p>
+					</button>
+					<h2>{{type[i]}}</h2>
+					<h5>{{item1}}
+						<br>
+						{{size[i]}} MB
+					</h5>
 				</div>
 			</div>
 			<div class="main__url">
@@ -58,8 +58,7 @@
 					zu ihnen ein</p>
 				<div class="main__url__fields" id="input_url">
 					<div class="main__url__field">
-						<input type="text" id="input-field" placeholder="URL zur Google Drive,
-								WeTransfer, etc." />
+						<input type="text" id="input-field" placeholder="URL zur Google Drive, WeTransfer, etc." />
 						<div class="main__url__field__img">
 						</div>
 						{{but}}
@@ -68,9 +67,8 @@
 						</button>
 					</div>
 					<div class="main__url__field" v-for="(item, i) in inputUrl" :key="item.id">
-						<p>{{item}}</p>
-						</output>
-						<div class="main__url__field__img">
+						<a :href="`${item}`">{{item}}</a>
+						<div class=" main__url__field__img">
 						</div>
 						<button class="main__url__field__button" @click="deleteUrl(item.id)">
 							<img src="img/minus.png" alt="">
@@ -78,7 +76,8 @@
 					</div>
 				</div>
 			</div>
-			<button id="buttonToform" disabled class="describe__button describe__button-drag" onclick="location.href='form.html';">
+			<button id="buttonToform" disabled class="describe__button
+					describe__button-drag" onclick="location.href='form.html';">
 				<p> weiter</p>
 			</button>
 			<a class="main__link-back" href="index.html">Zurück</a>
@@ -93,6 +92,7 @@
 			el: '#input_url',
 			data: {
 				inputUrl: [],
+				urlHref: []
 			},
 			methods: {
 				addNewUrl() {
@@ -100,6 +100,7 @@
 					let val = document.getElementById("input-field").value;
 					if (val != '') this.inputUrl.push(val);
 					document.getElementById("input-field").value = '';
+					this.urlHref.push(val);
 				},
 				deleteUrl(index) {
 					this.inputUrl.splice(index, 1);
@@ -125,8 +126,10 @@
 				type: []
 			},
 			methods: {
-				deletes(i) {
-					this.name.splice(i, 1);
+				deletes(index) {
+					this.name.splice(index, 1);
+					this.size.splice(index, 1);
+					this.type.splice(index, 1);
 				},
 				// file drag hover
 				FileDragHover(e) {
@@ -165,12 +168,18 @@
 			computed: {
 
 				Init() {
+
+
 					if (this.name.length == 0) {
 						document.getElementById("buttonToform").style.opacity = "0.3"
 						document.getElementById("buttonToform").disabled = true;
+						document.getElementById("messages").style.display = "none";
+						document.getElementById("messages").style.marginTop = "0";
 					} else {
 						document.getElementById("buttonToform").style.opacity = "1";
 						document.getElementById("buttonToform").disabled = false;
+						document.getElementById("messages").style.display = "flex";
+						document.getElementById("messages").style.marginTop = "0";
 					}
 					var fileselect = document.getElementById("fileselect"),
 						filedrag = document.getElementById("filedrag"),
