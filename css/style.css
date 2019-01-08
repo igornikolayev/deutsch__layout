@@ -240,10 +240,11 @@ button:hover {
       position: relative;
       top: -5px; }
   .main__field__img {
-    background: url("../img/upload.jpg") no-repeat center;
+    background: url("../img/upload.jpg") no-repeat;
     margin-top: 50px;
     margin-bottom: 20px;
-    background-size: 270px; }
+    width: 270px;
+    height: 200px; }
   .main__field p {
     font-size: 20px;
     margin-bottom: 60px; }
@@ -266,7 +267,7 @@ button:hover {
     box-shadow: 20px 14px 52px -1px #c7b9c7;
     border-radius: 20px;
     overflow: hidden;
-    max-width: 400px; }
+    max-width: 445px; }
   .main__url__field {
     padding: 20px 25px;
     display: flex;
