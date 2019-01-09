@@ -260,7 +260,8 @@ button:hover {
     position: relative;
     left: 23%;
     visibility: hidden;
-    box-shadow: 4px 8px 35px 1px #c7b9c7; }
+    box-shadow: 4px 8px 35px 1px #c7b9c7;
+    cursor: pointer; }
     .main__field-button img {
       position: relative;
       top: -5px; }
