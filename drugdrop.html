@@ -44,7 +44,7 @@
 				{{Init}}
 				<div class="main__field__out" v-for="(item1, i) in name" :key="item1.id">
 					<button class="main__field__out__delete" @click="deletes(item1)">
-						<p class="main__field__out__delete-text">loschen</p>
+						<p class="main__field__out__delete-text">löschen</p>
 					</button>
 					<h2>{{type[i]}}</h2>
 					<h5>{{item1}}
@@ -58,7 +58,7 @@
 					zu ihnen ein</p>
 				<div class="main__url__fields" id="input_url">
 					<div class="main__url__field">
-						<input type="text" id="input-field" placeholder="URL zur Google Drive, WeTransfer, etc." />
+						<input type="text" id="input-field" v-on:keyup.enter="addNewUrl" placeholder="URL zur Google Drive, WeTransfer, etc." />
 						<div class="main__url__field__img">
 						</div>
 						{{but}}
@@ -160,7 +160,7 @@
 					this.name.push(file.name);
 					this.type.push(file.type);
 					this.size.push(file.size / 1000000);
-					document.getElementById("messages").style.border = "1px dashed #ddd";
+					document.getElementById("messages").style.border = "2px dashed #ddd";
 					document.getElementById("buttonToform").style.opacity = 1;
 				},
 

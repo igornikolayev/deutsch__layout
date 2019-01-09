@@ -24,14 +24,15 @@ button {
   outline: none; }
 
 button:hover {
-  background: #16cbe1;
-  border-color: #16cbe1; }
+  background: #15c8e0;
+  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
+  border-color: #fff; }
   button:hover p {
     color: #fff; }
 
 .logo {
   margin-left: 20px;
-  margin-top: 50px; }
+  margin-top: 20px; }
 
 .container {
   width: 80%;
@@ -44,11 +45,11 @@ button:hover {
   .header__text {
     font-family: "Avenir heavy";
     font-size: 55px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     color: #292929; }
   .header__proposition__text {
     font-size: 23px;
-    margin-bottom: 50px; }
+    margin-bottom: 40px; }
   .header__proposition__list {
     width: 78%;
     margin: auto;
@@ -62,7 +63,7 @@ button:hover {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 65px;
+      padding-top: 50px;
       padding-bottom: 25px;
       min-width: 250px; }
       .header__proposition__list__item img {
@@ -79,7 +80,7 @@ button:hover {
           width: 2em;
           margin-left: -2em; }
       .header__proposition__list__item__link {
-        margin-top: 20px;
+        margin-top: 10px;
         opacity: 0;
         font-size: 18px;
         color: #16b9d2;
@@ -87,7 +88,7 @@ button:hover {
         font-family: "Avenir heavy";
         transition: opacity 1000ms; }
       .header__proposition__list__item__more {
-        margin-top: 20px;
+        margin-top: 5px;
         font-size: 12px;
         color: #262626;
         text-decoration: none;
@@ -116,7 +117,8 @@ button:hover {
   .header-text-container a {
     cursor: pointer;
     position: relative;
-    left: -20px; }
+    left: -20px;
+    top: -13px; }
 
 .main {
   margin-top: 150px; }
@@ -184,14 +186,16 @@ button:hover {
   text-align: center; }
   .describe h2 {
     font-size: 35px;
-    font-family: "Avenir heavy"; }
+    font-family: "Avenir heavy";
+    color: #292929; }
   .describe p {
     margin-top: 70px;
     font-size: 20px; }
   .describe__button {
     margin: auto;
     margin-top: 80px;
-    background: #16b9d2;
+    background: #15c8e0;
+    background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
     padding: 10px 25px 10px 35px;
     border: none;
     border-radius: 50px;
@@ -237,7 +241,7 @@ button:hover {
 
 .drag-header {
   position: relative;
-  top: -16px;
+  top: -26px;
   margin-bottom: 0px; }
 
 .main-drag {
@@ -248,10 +252,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px dashed #e8e8e8;
-  border-radius: 20px; }
+  border: 2px dashed #e8e8e8;
+  border-radius: 20px;
+  cursor: pointer; }
   .main__field-button {
-    margin-top: 60px;
+    margin-top: 30px;
     background: #16b9d2;
     width: 50px;
     height: 50px;
@@ -267,13 +272,13 @@ button:hover {
       top: -5px; }
   .main__field__img {
     background: url("../img/upload.jpg") no-repeat center;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     width: 270px;
     height: 200px; }
   .main__field p {
     font-size: 20px;
-    margin-bottom: 60px; }
+    margin-bottom: 80px; }
 
 .main__url {
   margin-top: 60px;
@@ -290,7 +295,7 @@ button:hover {
   .main__url__fields {
     display: flex;
     flex-direction: column;
-    box-shadow: 20px 14px 52px -1px #c7b9c7;
+    box-shadow: 5px 10px 50px -5px #c7b9c7;
     border-radius: 20px;
     overflow: hidden;
     max-width: 445px; }
@@ -327,7 +332,9 @@ button:hover {
       border-radius: 15px;
       border: 1px solid #e8e8e8;
       text-decoration: none;
-      outline: none; }
+      outline: none;
+      font-family: 'Ubuntu';
+      font-weight: 100; }
       .main__url__field input:focus {
         border-color: #16b9d2; }
       .main__url__field input:focus + .main__url__field__img {
@@ -355,7 +362,9 @@ button:hover {
   text-align: center;
   display: block;
   margin-bottom: 20px;
-  opacity: 0.3; }
+  opacity: 0.3;
+  background: #15c8e0;
+  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%); }
   .describe__button-drag p {
     margin: 0; }
   .describe__button-drag:after {
@@ -386,11 +395,12 @@ button:hover {
   flex-direction: row;
   font-family: 'Ubuntu';
   font-weight: bold;
-  margin-bottom: 30px;
-  margin-left: 5px; }
+  margin-bottom: 15px;
+  margin-left: 5px;
+  color: #494949; }
   .contact__header__image {
     position: absolute;
-    margin-left: -30px; }
+    margin-left: -38px; }
 
 .contact__fields {
   display: flex;
@@ -401,18 +411,18 @@ button:hover {
     font-size: 22px;
     color: #494949;
     padding: 10px;
-    margin-bottom: 25px;
-    border-radius: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     outline: none;
     font-family: 'Ubuntu';
     font-weight: normal; }
     .contact__fields input:hover {
-      border: 1px solid #16b9d2; }
+      border: 1px solid #6d6d6d; }
     .contact__fields input:focus {
       border: 1px solid #16b9d2; }
 
 .button-form {
-  margin-top: 60px;
+  margin-top: 80px;
   padding-left: 60px;
   padding-right: 60px;
   width: 420px;
@@ -422,7 +432,8 @@ button:hover {
 .danke__button {
   margin: auto;
   margin-top: 10px;
-  background: #16b9d2;
+  background: #15c8e0;
+  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
   padding: 10px 100px;
   border: none;
   border-radius: 50px; }
@@ -524,9 +535,8 @@ button:hover {
           position: relative;
           top: -3px;
           margin-bottom: 12px; }
-          .header__proposition__list__item:hover .header__proposition__list__item__link, .header__proposition__list__item:hover .header__proposition__list__item__more {
-            visibility: visible;
-            opacity: 1; }
+          .header__proposition__list__item:hover:last-child {
+            margin-bottom: 12px; }
   .header-text-container img {
     transform: rotate(180deg);
     max-width: 60px;
@@ -540,8 +550,6 @@ button:hover {
   .main__content__article__header {
     font-size: 28px;
     line-height: 40px;
-    font-family: "Avenir heavy";
-    color: #292929;
     margin-bottom: 40px; }
   .main__content__article__text {
     font-size: 18px;
@@ -551,15 +559,12 @@ button:hover {
     margin-top: 90px;
     text-align: center; }
     .describe h2 {
-      font-size: 30px;
-      font-family: "Avenir heavy"; }
+      font-size: 30px; }
     .describe p {
       margin-top: 50px;
       font-size: 18px; }
     .describe__button p {
-      color: #fff;
       font-size: 18px;
-      font-family: "Avenir medium";
       margin: 0;
       white-space: normal; }
     .describe__button img {
@@ -568,8 +573,6 @@ button:hover {
     margin-top: 120px;
     font-size: 13px; }
   .border {
-    background: #e8e8e8;
-    height: 1px;
     margin-bottom: 40px;
     width: 100%; }
   .border-form {
@@ -621,22 +624,17 @@ button:hover {
   .contact__header {
     display: flex;
     flex-direction: row;
-    font-family: 'Ubuntu';
-    font-weight: bold;
     margin-bottom: 30px;
     margin-left: 5px; }
     .contact__header__image {
       position: absolute;
       margin-left: -30px; }
   .contact__fields input {
-    border: none;
+    border: 1px solid #fff;
     font-size: 22px;
     color: #494949;
     padding: 10px;
     margin-bottom: 25px;
-    border-radius: 20px;
-    font-family: 'Ubuntu';
-    font-weight: normal;
     outline: none; }
     .contact__fields input:focus {
       border: 1px solid #16b9d2; }
@@ -678,7 +676,7 @@ button:hover {
     max-height: 20px; }
   .header-text-container a {
     left: -5px;
-    top: -7px; }
+    top: -18px; }
   .main {
     margin-top: 100px; }
   .main__content {
@@ -781,7 +779,7 @@ button:hover {
       .main__url__field input {
         padding: 10px;
         padding-left: 40px;
-        font-size: 12px;
+        font-size: 14px;
         color: #494949;
         width: 200px;
         border-radius: 15px;
@@ -792,7 +790,7 @@ button:hover {
         border: none;
         padding: 10px;
         padding-left: 40px;
-        font-size: 12px;
+        font-size: 14px;
         color: #494949; }
         .main__url__field a:hover + .main__url__field__img {
           background: url("../img/url-blue.png") no-repeat top left; }
@@ -804,49 +802,27 @@ button:hover {
     margin: auto;
     font-size: 18px; }
   .contact__header {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Ubuntu';
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 5px; }
+    margin-bottom: 15px;
+    margin-left: 3px; }
     .contact__header__image {
       position: absolute;
-      margin-left: -30px; }
-  .contact__fields {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-    .contact__fields input {
-      border: none;
-      font-size: 16px;
-      color: #494949;
-      padding: 8px;
-      margin-bottom: 20px;
-      border-radius: 20px;
-      font-family: 'Ubuntu';
-      font-weight: normal;
-      outline: none; }
-      .contact__fields input:focus {
-        border: 1px solid #16b9d2; }
+      margin-left: -33px; }
+  .contact__fields input {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 10px; }
   .button-form {
     margin-top: 60px;
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 80%;
-    white-space: nowrap;
-    text-align: center; }
+    max-width: 80%; }
     .button-form p {
       font-size: 15px; }
   .danke__button {
     margin: auto;
     margin-top: 10px;
-    background: #16b9d2;
-    padding: 10px 80px;
-    border: none;
-    border-radius: 50px; }
+    padding: 10px 80px; }
     .danke__button p {
-      color: #fff;
       font-size: 16px; }
   .danke-text {
     font-size: 16px;

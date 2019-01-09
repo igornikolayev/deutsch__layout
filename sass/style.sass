@@ -19,13 +19,14 @@ button
 	cursor: pointer
 	outline: none
 button:hover
-	background: #16cbe1
-	border-color: #16cbe1
+	background: rgba(21,200,224,1)
+	background: linear-gradient(to right, rgba(21,200,224,1) 0%, rgba(21,178,211,1) 100%)
+	border-color: #fff
 	p
 		color: #fff
 .logo
 	margin-left: 20px
-	margin-top: 50px	
+	margin-top: 20px	
 	
 .container
 	width: 80%
@@ -37,12 +38,12 @@ button:hover
 	&__text		
 		font-family: "Avenir heavy"
 		font-size: 55px
-		margin-bottom: 55px
+		margin-bottom: 35px
 		color: #292929
 	&__proposition
 		&__text
 			font-size: 23px
-			margin-bottom: 50px
+			margin-bottom: 40px
 		&__list
 			width: 78%
 			margin: auto
@@ -52,12 +53,11 @@ button:hover
 			justify-content: center
 			border-radius: 20px
 			box-shadow: 10px 20px 35px 4px rgba(199,185,199,1)
-			 
 			&__item
 				display: flex
 				flex-direction: column				
 				align-items: center
-				padding-top: 65px 	
+				padding-top: 50px 	
 				padding-bottom: 25px
 				min-width: 250px
 				img
@@ -74,7 +74,7 @@ button:hover
 						width: 2em
 						margin-left: -2em
 				&__link
-					margin-top: 20px
+					margin-top: 10px
 					transform:translate(9999px)
 					opacity: 0
 					font-size: 18px
@@ -84,7 +84,7 @@ button:hover
 					transition: opacity 1000ms
 					
 				&__more
-					margin-top: 20px
+					margin-top: 5px
 					font-size: 12px
 					color: #262626
 					text-decoration: none
@@ -119,6 +119,7 @@ button:hover
 		cursor: pointer
 		position: relative
 		left: -20px
+		top: -13px
 
 .main
 	margin-top: 150px
@@ -183,13 +184,15 @@ button:hover
 	h2
 		font-size: 35px
 		font-family: "Avenir heavy"
+		color: #292929
 	p
 		margin-top: 70px
 		font-size: 20px 
 	&__button
 		margin: auto
 		margin-top: 80px
-		background: #16b9d2
+		background: rgba(21,200,224,1)
+		background: linear-gradient(to right, rgba(21,200,224,1) 0%, rgba(21,178,211,1) 100%)
 		padding: 10px 25px 10px 35px
 		border: none
 		border-radius: 50px
@@ -232,7 +235,7 @@ button:hover
 	margin-bottom: 120px
 .drag-header
 	position: relative
-	top: -16px
+	top: -26px
 	margin-bottom: 0px	
 .main-drag
 	text-align: center
@@ -241,10 +244,11 @@ button:hover
 	display: flex
 	flex-direction: column
 	align-items: center
-	border: 1px dashed #e8e8e8
+	border: 2px dashed #e8e8e8
 	border-radius: 20px
+	cursor: pointer
 	&-button
-		margin-top: 60px
+		margin-top: 30px
 		background: #16b9d2
 		width: 50px
 		height: 50px
@@ -260,13 +264,13 @@ button:hover
 			top: -5px
 	&__img
 		background: url('../img/upload.jpg') no-repeat center
-		margin-top: 50px
+		margin-top: 20px
 		margin-bottom: 20px
 		width: 270px
 		height: 200px
 	p
 		font-size: 20px
-		margin-bottom: 60px
+		margin-bottom: 80px
 .main__url
 	margin-top: 60px
 	display: flex
@@ -282,7 +286,7 @@ button:hover
 	&__fields
 		display: flex
 		flex-direction: column
-		box-shadow: 20px 14px 52px -1px rgba(199,185,199,1)
+		box-shadow: 5px 10px 50px -5px rgba(199,185,199,1)
 		border-radius: 20px
 		overflow: hidden
 		max-width: 445px
@@ -320,6 +324,8 @@ button:hover
 			border: 1px solid #e8e8e8
 			text-decoration: none
 			outline: none
+			font-family: 'Ubuntu'
+			font-weight: 100
 			&:focus
 				border-color: #16b9d2
 			&:focus + .main__url__field__img
@@ -348,6 +354,8 @@ button:hover
 	display: block
 	margin-bottom:  20px
 	opacity: 0.3
+	background: rgba(21,200,224,1)
+	background: linear-gradient(to right, rgba(21,200,224,1) 0%, rgba(21,178,211,1) 100%)
 	p
 		margin: 0
 	&:after
@@ -374,11 +382,12 @@ button:hover
 	flex-direction: row
 	font-family: 'Ubuntu'
 	font-weight: bold
-	margin-bottom: 30px
+	margin-bottom: 15px
 	margin-left: 5px
+	color: #494949
 	&__image
 		position: absolute
-		margin-left: -30px
+		margin-left: -38px
 .contact__fields
 	display: flex
 	flex-direction: column
@@ -388,17 +397,17 @@ button:hover
 		font-size: 22px
 		color: #494949
 		padding: 10px
-		margin-bottom: 25px
-		border-radius: 20px
+		margin-bottom: 10px
+		border-radius: 10px
 		outline: none 
 		font-family: 'Ubuntu'
 		font-weight: normal
 		&:hover
-			border: 1px solid #16b9d2
+			border: 1px solid #6d6d6d
 		&:focus
 			border: 1px solid #16b9d2
 .button-form
-	margin-top: 60px
+	margin-top: 80px
 	padding-left: 60px
 	padding-right: 60px
 	width: 420px
@@ -407,8 +416,9 @@ button:hover
 
 .danke__button
 	margin: auto
-	margin-top: 10px
-	background: #16b9d2	
+	margin-top: 10px	
+	background: rgba(21,200,224,1)
+	background: linear-gradient(to right, rgba(21,200,224,1) 0%, rgba(21,178,211,1) 100%)
 	padding: 10px 100px
 	border: none
 	border-radius: 50px
@@ -509,10 +519,9 @@ button:hover
 						position: relative
 						top: -3px
 						margin-bottom: 12px
-						.header__proposition__list__item__link, .header__proposition__list__item__more
-							visibility: visible
-							opacity: 1 
-
+						&:last-child
+							margin-bottom: 12px
+					
 					
 							
 	.header-text-container
@@ -531,8 +540,6 @@ button:hover
 	.main__content__article__header
 		font-size: 28px
 		line-height: 40px
-		font-family: "Avenir heavy"
-		color: #292929
 		margin-bottom: 40px
 	.main__content__article__text
 		font-size: 18px
@@ -543,15 +550,12 @@ button:hover
 		text-align: center
 		h2
 			font-size: 30px
-			font-family: "Avenir heavy"
 		p
 			margin-top: 50px
 			font-size: 18px 
 		&__button
 			p
-				color: #fff
 				font-size: 18px
-				font-family: "Avenir medium"
 				margin: 0
 				white-space: normal
 			img
@@ -561,8 +565,6 @@ button:hover
 		margin-top: 120px
 		font-size: 13px		
 	.border
-		background: #e8e8e8
-		height: 1px
 		margin-bottom: 40px
 		width: 100%
 	.border-form
@@ -616,8 +618,6 @@ button:hover
 	.contact__header
 		display: flex
 		flex-direction: row
-		font-family: 'Ubuntu'
-		font-weight: bold
 		margin-bottom: 30px
 		margin-left: 5px
 		&__image
@@ -625,14 +625,11 @@ button:hover
 			margin-left: -30px
 	.contact__fields
 		input
-			border: none
+			border: 1px solid #fff
 			font-size: 22px
 			color: #494949
 			padding: 10px
 			margin-bottom: 25px
-			border-radius: 20px
-			font-family: 'Ubuntu'
-			font-weight: normal
 			outline: none  
 			&:focus
 				border: 1px solid #16b9d2
@@ -676,7 +673,7 @@ button:hover
 			max-height: 20px
 		a
 			left: -5px
-			top: -7px
+			top: -18px
 	.main
 		margin-top: 100px
 	.main__content
@@ -785,7 +782,7 @@ button:hover
 			input
 				padding: 10px
 				padding-left: 40px 
-				font-size: 12px
+				font-size: 14px
 				color: #494949
 				width: 200px
 				border-radius: 15px
@@ -796,7 +793,7 @@ button:hover
 				border: none
 				padding: 10px
 				padding-left: 40px 
-				font-size: 12px
+				font-size: 14px
 				color: #494949
 				&:hover + .main__url__field__img
 					background: url('../img/url-blue.png') no-repeat top left
@@ -809,49 +806,28 @@ button:hover
 		margin: auto
 		font-size: 18px
 	.contact__header
-		display: flex
-		flex-direction: row
-		font-family: 'Ubuntu'
-		font-weight: bold
-		margin-bottom: 20px
-		margin-left: 5px
+		margin-bottom: 15px
+		margin-left: 3px
 		&__image
 			position: absolute
-			margin-left: -30px
+			margin-left: -33px
 	.contact__fields
-		display: flex
-		flex-direction: column
-		justify-content: flex-start
 		input
-			border: none
 			font-size: 16px
-			color: #494949
 			padding: 8px
-			margin-bottom: 20px
-			border-radius: 20px
-			font-family: 'Ubuntu'
-			font-weight: normal
-			outline: none  
-			&:focus
-				border: 1px solid #16b9d2
+			margin-bottom: 10px
 	.button-form
 		margin-top: 60px
 		padding-left: 10px
 		padding-right: 10px
 		max-width: 80% 
-		white-space: nowrap
-		text-align: center
 		p
 			font-size: 15px
 	.danke__button
 		margin: auto
 		margin-top: 10px
-		background: #16b9d2	
 		padding: 10px 80px
-		border: none
-		border-radius: 50px
 		p
-			color: #fff
 			font-size: 16px
 	.danke-text
 		font-size: 16px
