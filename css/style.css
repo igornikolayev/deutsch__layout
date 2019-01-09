@@ -6,6 +6,10 @@
   font-family: "Avenir heavy";
   src: url("../fonts/Avenir-Heavy.ttf"); }
 
+@font-face {
+  font-family: "Avenir medium";
+  src: url("../fonts/Avenir-Medium.ttf"); }
+
 #fileselect {
   visibility: hidden; }
 
@@ -59,10 +63,8 @@ button:hover {
       flex-direction: column;
       align-items: center;
       padding-top: 65px;
-      padding-bottom: 55px;
+      padding-bottom: 25px;
       min-width: 250px; }
-      .header__proposition__list__item:first-child {
-        margin-left: 0px; }
       .header__proposition__list__item img {
         max-width: 55px;
         max-height: 55px;
@@ -86,7 +88,6 @@ button:hover {
         transition: opacity 1000ms; }
       .header__proposition__list__item__more {
         margin-top: 20px;
-        display: none;
         font-size: 12px;
         color: #262626;
         text-decoration: none;
@@ -95,7 +96,9 @@ button:hover {
         transition: opacity 2000ms; }
       .header__proposition__list__item:hover {
         border-top: 3px solid #16b9d2;
-        padding-bottom: 0; }
+        padding-bottom: 0;
+        position: relative;
+        top: -3px; }
         .header__proposition__list__item:hover .header__proposition__list__item__link, .header__proposition__list__item:hover .header__proposition__list__item__more {
           display: block;
           visibility: visible;
@@ -145,20 +148,31 @@ button:hover {
 .main__content__article__button {
   background: #fff;
   padding: 10px 20px;
-  border: solid;
-  border-color: #16b9d2;
+  border: 2px solid #16b9d2;
   border-radius: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   max-width: 230px;
   width: 100%;
   position: relative; }
   .main__content__article__button p {
     margin-right: 10%;
     font-size: 18px;
-    font-family: "Avenir heavy";
+    font-family: "Avenir medium";
     color: #16b9d2; }
+  .main__content__article__button:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #16b9d2;
+    border-right: 1px solid #16b9d2;
+    transform: rotate(45deg); }
+  .main__content__article__button:hover:after {
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff; }
 
 .main__content__image {
   width: 40%; }
@@ -178,21 +192,31 @@ button:hover {
     margin: auto;
     margin-top: 80px;
     background: #16b9d2;
-    padding: 10px 25px;
+    padding: 10px 35px 10px 25px;
     border: none;
     border-radius: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    width: 33%;
     min-width: 250px;
     max-width: 360px; }
+    .describe__button img {
+      margin-left: 70px; }
     .describe__button p {
       color: #fff;
       font-size: 18px;
-      font-family: "Avenir heavy";
-      margin: 0; }
+      font-family: "Avenir medium";
+      margin: 0;
+      white-space: nowrap;
+      margin-right: 70px; }
+    .describe__button:after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: rotate(45deg); }
 
 .footer {
   margin-top: 150px;
@@ -235,12 +259,13 @@ button:hover {
     border: none;
     position: relative;
     left: 23%;
-    display: none; }
+    visibility: hidden;
+    box-shadow: 4px 8px 35px 1px #c7b9c7; }
     .main__field-button img {
       position: relative;
       top: -5px; }
   .main__field__img {
-    background: url("../img/upload.jpg") no-repeat;
+    background: url("../img/upload.jpg") no-repeat center;
     margin-top: 50px;
     margin-bottom: 20px;
     width: 270px;
@@ -313,7 +338,7 @@ button:hover {
       width: 20px;
       height: 20px;
       position: absolute;
-      top: 30px;
+      top: 28.5px;
       left: 35px; }
     .main__url__field__button {
       margin-left: 25px;
@@ -332,6 +357,8 @@ button:hover {
   opacity: 0.3; }
   .describe__button-drag p {
     margin: 0; }
+  .describe__button-drag:after {
+    content: none; }
 
 .main__link-back {
   text-decoration: none;
@@ -343,10 +370,10 @@ button:hover {
 .main__field:hover {
   border: 2px dashed #16b9d2; }
   .main__field:hover .main__field__img {
-    background: url("../SVG/undraw_upload_87y9.svg") no-repeat;
-    background-size: 270px; }
+    background: url("../SVG/undraw_upload_87y9.svg") no-repeat center;
+    background-size: 250px; }
   .main__field:hover .main__field-button {
-    display: block; }
+    visibility: visible; }
 
 .main__form {
   width: 43%;
@@ -356,7 +383,8 @@ button:hover {
 .contact__header {
   display: flex;
   flex-direction: row;
-  font-family: "Avenir heavy";
+  font-family: 'Ubuntu';
+  font-weight: bold;
   margin-bottom: 30px;
   margin-left: 5px; }
   .contact__header__image {
@@ -368,13 +396,17 @@ button:hover {
   flex-direction: column;
   justify-content: flex-start; }
   .contact__fields input {
-    border: none;
+    border: 1px solid #fff;
     font-size: 22px;
     color: #494949;
     padding: 10px;
     margin-bottom: 25px;
     border-radius: 20px;
-    outline: none; }
+    outline: none;
+    font-family: 'Ubuntu';
+    font-weight: normal; }
+    .contact__fields input:hover {
+      border: 1px solid #16b9d2; }
     .contact__fields input:focus {
       border: 1px solid #16b9d2; }
 
@@ -383,7 +415,8 @@ button:hover {
   padding-left: 60px;
   padding-right: 60px;
   width: 420px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  max-width: 550px; }
 
 .danke__button {
   margin: auto;
@@ -406,7 +439,8 @@ button:hover {
 
 .danke-body {
   height: 100%;
-  margin: auto; }
+  margin: auto;
+  margin-top: -50px; }
 
 .message__field {
   display: flex;
@@ -414,7 +448,8 @@ button:hover {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 30px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-top: 50px; }
 
 .main__field__out {
   margin-right: 25px;
@@ -438,7 +473,7 @@ button:hover {
     .main__field__out__delete:hover {
       background: #fff; }
       .main__field__out__delete:hover p {
-        font-family: "Avenir heavy";
+        font-family: "Avenir medium";
         color: #16cbe1;
         text-decoration: underline; }
   .main__field__out h2 {
@@ -477,11 +512,20 @@ button:hover {
         flex-direction: column;
         align-items: center;
         padding-top: 55px;
-        padding-bottom: 45px;
+        padding-bottom: 15px;
         width: 250px;
         margin: auto; }
         .header__proposition__list__item:first-child {
           margin: auto; }
+        .header__proposition__list__item:hover {
+          border-top: 3px solid #16b9d2;
+          padding-bottom: 0;
+          position: relative;
+          top: -3px;
+          margin-bottom: 12px; }
+          .header__proposition__list__item:hover .header__proposition__list__item__link, .header__proposition__list__item:hover .header__proposition__list__item__more {
+            visibility: visible;
+            opacity: 1; }
   .header-text-container img {
     transform: rotate(180deg);
     max-width: 60px;
@@ -514,8 +558,11 @@ button:hover {
     .describe__button p {
       color: #fff;
       font-size: 18px;
-      font-family: "Avenir heavy";
-      margin: 0; }
+      font-family: "Avenir medium";
+      margin: 0;
+      white-space: normal; }
+    .describe__button img {
+      margin-left: 10px; }
   .footer {
     margin-top: 120px;
     font-size: 13px; }
@@ -532,7 +579,7 @@ button:hover {
     background: url("../img/upload.jpg") no-repeat center;
     margin-top: 40px;
     margin-bottom: 20px;
-    width: 240px;
+    width: 250px;
     min-height: 200px; }
   .main__field p {
     font-size: 18px;
@@ -573,26 +620,25 @@ button:hover {
   .contact__header {
     display: flex;
     flex-direction: row;
-    font-family: "Avenir heavy";
+    font-family: 'Ubuntu';
+    font-weight: bold;
     margin-bottom: 30px;
     margin-left: 5px; }
     .contact__header__image {
       position: absolute;
       margin-left: -30px; }
-  .contact__fields {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-    .contact__fields input {
-      border: none;
-      font-size: 22px;
-      color: #494949;
-      padding: 10px;
-      margin-bottom: 25px;
-      border-radius: 20px;
-      outline: none; }
-      .contact__fields input:focus {
-        border: 1px solid #16b9d2; }
+  .contact__fields input {
+    border: none;
+    font-size: 22px;
+    color: #494949;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    outline: none; }
+    .contact__fields input:focus {
+      border: 1px solid #16b9d2; }
   .button-form {
     margin-top: 60px;
     padding-left: 60px;
@@ -658,12 +704,6 @@ button:hover {
   .main__content__article__button {
     background: #fff;
     padding: 10px 20px;
-    border: solid;
-    border-color: #16b9d2;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     max-width: 230px;
     width: 100%;
     position: relative;
@@ -673,7 +713,7 @@ button:hover {
     .main__content__article__button p {
       margin-right: 10%;
       font-size: 18px;
-      font-family: "Avenir heavy";
+      font-family: "Avenir medium ";
       color: #16b9d2; }
   .main__content__image {
     width: 100%;
@@ -693,7 +733,7 @@ button:hover {
     .describe__button p {
       color: #fff;
       font-size: 18px;
-      font-family: "Avenir heavy";
+      font-family: "Avenir medium";
       margin: 0; }
   .footer {
     margin-top: 120px;
@@ -710,7 +750,7 @@ button:hover {
     .main__field-button {
       margin-top: 40px; }
     .main__field__img {
-      background: url("../img/upload.jpg") no-repeat contain;
+      background: url("../img/upload.jpg") no-repeat center;
       margin-top: 40px;
       margin-bottom: 20px;
       background-size: 200px; }
@@ -718,7 +758,7 @@ button:hover {
       font-size: 18px;
       margin-bottom: 50px; }
   .main__field:hover .main__field__img {
-    background: url("../SVG/undraw_upload_87y9.svg") no-repeat;
+    background: url("../SVG/undraw_upload_87y9.svg") no-repeat center;
     background-size: 200px; }
   .main__url {
     margin-top: 50px;
@@ -754,9 +794,7 @@ button:hover {
         font-size: 12px;
         color: #494949; }
         .main__url__field a:hover + .main__url__field__img {
-          background: url("../img/url-blue.png") no-repeat;
-          width: 15px;
-          height: 15px; }
+          background: url("../img/url-blue.png") no-repeat top left; }
         .main__url__field a:hover {
           color: #16b9d2;
           text-decoration: underline; }
@@ -767,7 +805,8 @@ button:hover {
   .contact__header {
     display: flex;
     flex-direction: row;
-    font-family: "Avenir heavy";
+    font-family: 'Ubuntu';
+    font-weight: bold;
     margin-bottom: 20px;
     margin-left: 5px; }
     .contact__header__image {
@@ -784,6 +823,8 @@ button:hover {
       padding: 8px;
       margin-bottom: 20px;
       border-radius: 20px;
+      font-family: 'Ubuntu';
+      font-weight: normal;
       outline: none; }
       .contact__fields input:focus {
         border: 1px solid #16b9d2; }

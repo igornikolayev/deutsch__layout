@@ -4,6 +4,9 @@
 @font-face
   font-family: "Avenir heavy"
   src: url('../fonts/Avenir-Heavy.ttf')
+@font-face
+  font-family: "Avenir medium"
+  src: url('../fonts/Avenir-Medium.ttf')
 #fileselect
 	visibility: hidden
 
@@ -55,10 +58,8 @@ button:hover
 				flex-direction: column				
 				align-items: center
 				padding-top: 65px 	
-				padding-bottom: 55px
+				padding-bottom: 25px
 				min-width: 250px
-				&:first-child
-					margin-left: 0px
 				img
 					max-width: 55px
 					max-height: 55px
@@ -84,7 +85,6 @@ button:hover
 					
 				&__more
 					margin-top: 20px
-					display: none
 					font-size: 12px
 					color: #262626
 					text-decoration: none
@@ -96,6 +96,8 @@ button:hover
 				&:hover
 					border-top: 3px solid #16b9d2
 					padding-bottom: 0
+					position: relative
+					top: -3px
 					.header__proposition__list__item__link, .header__proposition__list__item__more
 						display: block
 						visibility: visible
@@ -143,20 +145,33 @@ button:hover
 .main__content__article__button
 	background: #fff
 	padding: 10px 20px
-	border: solid
-	border-color: #16b9d2
+	border: 2px solid #16b9d2 
 	border-radius: 50px
 	display: flex
 	flex-direction: row
 	justify-content: space-between
+	align-items: center
 	max-width: 230px
 	width: 100%
 	position: relative
 	p
 		margin-right: 10% 
 		font-size: 18px
-		font-family: "Avenir heavy"
+		font-family: "Avenir medium"
 		color: #16b9d2
+	&:after 
+		content: ''
+		display: inline-block
+		width: 10px
+		height: 10px
+		border-top: 1px solid #16b9d2
+		border-right: 1px solid #16b9d2
+		transform: rotate(45deg)
+	&:hover
+		&:after 
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+
 
 .main__content__image
 	width: 40%
@@ -175,22 +190,32 @@ button:hover
 		margin: auto
 		margin-top: 80px
 		background: #16b9d2
-		padding: 10px 25px
+		padding: 10px 35px 10px 25px
 		border: none
 		border-radius: 50px
 		display: flex
 		flex-direction: row
-		justify-content: space-between
 		align-items: center
-		width: 33%
 		min-width: 250px
 		max-width: 360px
+		img
+			margin-left: 70px
 		p
 			color: #fff
 			font-size: 18px
-			font-family: "Avenir heavy"
+			font-family: "Avenir medium"
 			margin: 0
-		
+			white-space: nowrap
+			margin-right: 70px
+		&:after 
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			transform: rotate(45deg)
+			
 .footer
 	margin-top: 150px
 	font-style: 13px
@@ -227,12 +252,13 @@ button:hover
 		border: none
 		position: relative
 		left: 23%
-		display: none
+		visibility: hidden
+		box-shadow: 4px 8px 35px 1px rgba(199,185,199,1)
 		img
 			position: relative
 			top: -5px
 	&__img
-		background: url('../img/upload.jpg') no-repeat
+		background: url('../img/upload.jpg') no-repeat center
 		margin-top: 50px
 		margin-bottom: 20px
 		width: 270px
@@ -305,7 +331,7 @@ button:hover
 			width: 20px
 			height: 20px
 			position: absolute
-			top: 30px
+			top: 28.5px
 			left: 35px
 		&__button
 			margin-left: 25px
@@ -323,6 +349,8 @@ button:hover
 	opacity: 0.3
 	p
 		margin: 0
+	&:after
+		content: none
 .main__link-back
 	text-decoration: none
 	color: #727272
@@ -332,10 +360,10 @@ button:hover
 .main__field:hover
 	border: 2px dashed #16b9d2
 	.main__field__img
-		background: url('../SVG/undraw_upload_87y9.svg') no-repeat
-		background-size: 270px
+		background: url('../SVG/undraw_upload_87y9.svg') no-repeat center
+		background-size: 250px
 	.main__field-button
-		display: block
+		visibility: visible
 .main__form
 	width: 43%
 	margin: auto
@@ -343,7 +371,8 @@ button:hover
 .contact__header
 	display: flex
 	flex-direction: row
-	font-family: "Avenir heavy"
+	font-family: 'Ubuntu'
+	font-weight: bold
 	margin-bottom: 30px
 	margin-left: 5px
 	&__image
@@ -354,13 +383,17 @@ button:hover
 	flex-direction: column
 	justify-content: flex-start
 	input
-		border: none
+		border: 1px solid #fff
 		font-size: 22px
 		color: #494949
 		padding: 10px
 		margin-bottom: 25px
 		border-radius: 20px
-		outline: none  
+		outline: none 
+		font-family: 'Ubuntu'
+		font-weight: normal
+		&:hover
+			border: 1px solid #16b9d2
 		&:focus
 			border: 1px solid #16b9d2
 .button-form
@@ -369,6 +402,7 @@ button:hover
 	padding-right: 60px
 	width: 420px
 	white-space: nowrap
+	max-width: 550px
 
 .danke__button
 	margin: auto
@@ -389,13 +423,15 @@ button:hover
 .danke-body
 	height: 100%
 	margin: auto
+	margin-top: -50px 
 .message__field
 	display: flex
 	flex-direction: row
 	justify-content: flex-start
 	flex-wrap: wrap
 	padding: 30px
-	border-radius: 20px 
+	border-radius: 20px
+	margin-top: 50px 
 .main__field__out
 	margin-right: 25px
 	margin-bottom: 30px
@@ -420,7 +456,7 @@ button:hover
 		&:hover
 			background: #fff
 			p
-				font-family: "Avenir heavy"
+				font-family: "Avenir medium"
 				color: #16cbe1
 				text-decoration: underline
 	h2
@@ -461,11 +497,22 @@ button:hover
 					flex-direction: column				
 					align-items: center
 					padding-top: 55px 	
-					padding-bottom: 45px
+					padding-bottom: 15px
 					width: 250px
 					margin: auto
 					&:first-child
 						margin: auto
+					&:hover
+						border-top: 3px solid #16b9d2
+						padding-bottom: 0
+						position: relative
+						top: -3px
+						margin-bottom: 12px
+						.header__proposition__list__item__link, .header__proposition__list__item__more
+							visibility: visible
+							opacity: 1 
+
+					
 							
 	.header-text-container
 		img
@@ -503,8 +550,11 @@ button:hover
 			p
 				color: #fff
 				font-size: 18px
-				font-family: "Avenir heavy"
+				font-family: "Avenir medium"
 				margin: 0
+				white-space: normal
+			img
+				margin-left: 10px
 			
 	.footer
 		margin-top: 120px
@@ -523,7 +573,7 @@ button:hover
 			background: url('../img/upload.jpg') no-repeat center
 			margin-top: 40px
 			margin-bottom: 20px
-			width: 240px
+			width: 250px
 			min-height: 200px 
 
 		p
@@ -565,16 +615,14 @@ button:hover
 	.contact__header
 		display: flex
 		flex-direction: row
-		font-family: "Avenir heavy"
+		font-family: 'Ubuntu'
+		font-weight: bold
 		margin-bottom: 30px
 		margin-left: 5px
 		&__image
 			position: absolute
 			margin-left: -30px
 	.contact__fields
-		display: flex
-		flex-direction: column
-		justify-content: flex-start
 		input
 			border: none
 			font-size: 22px
@@ -582,6 +630,8 @@ button:hover
 			padding: 10px
 			margin-bottom: 25px
 			border-radius: 20px
+			font-family: 'Ubuntu'
+			font-weight: normal
 			outline: none  
 			&:focus
 				border: 1px solid #16b9d2
@@ -654,12 +704,6 @@ button:hover
 	.main__content__article__button
 		background: #fff
 		padding: 10px 20px
-		border: solid
-		border-color: #16b9d2
-		border-radius: 50px
-		display: flex
-		flex-direction: row
-		justify-content: space-between
 		max-width: 230px
 		width: 100%
 		position: relative
@@ -669,7 +713,7 @@ button:hover
 		p
 			margin-right: 10% 
 			font-size: 18px
-			font-family: "Avenir heavy"
+			font-family: "Avenir medium "
 			color: #16b9d2
 
 	.main__content__image
@@ -691,7 +735,7 @@ button:hover
 			p
 				color: #fff
 				font-size: 18px
-				font-family: "Avenir heavy"
+				font-family: "Avenir medium"
 				margin: 0
 			
 	.footer
@@ -709,7 +753,7 @@ button:hover
 		&-button
 			margin-top: 40px
 		&__img
-			background: url('../img/upload.jpg') no-repeat contain
+			background: url('../img/upload.jpg') no-repeat center
 			margin-top: 40px
 			margin-bottom: 20px
 			background-size: 200px
@@ -718,7 +762,7 @@ button:hover
 			margin-bottom: 50px
 	.main__field:hover
 		.main__field__img
-			background: url('../SVG/undraw_upload_87y9.svg') no-repeat
+			background: url('../SVG/undraw_upload_87y9.svg') no-repeat center
 			background-size: 200px
 	.main__url
 		margin-top: 50px
@@ -754,9 +798,8 @@ button:hover
 				font-size: 12px
 				color: #494949
 				&:hover + .main__url__field__img
-					background: url('../img/url-blue.png') no-repeat
-					width: 15px
-					height: 15px
+					background: url('../img/url-blue.png') no-repeat top left
+					
 				&:hover
 					color: #16b9d2
 					text-decoration: underline				
@@ -767,7 +810,8 @@ button:hover
 	.contact__header
 		display: flex
 		flex-direction: row
-		font-family: "Avenir heavy"
+		font-family: 'Ubuntu'
+		font-weight: bold
 		margin-bottom: 20px
 		margin-left: 5px
 		&__image
@@ -784,6 +828,8 @@ button:hover
 			padding: 8px
 			margin-bottom: 20px
 			border-radius: 20px
+			font-family: 'Ubuntu'
+			font-weight: normal
 			outline: none  
 			&:focus
 				border: 1px solid #16b9d2
