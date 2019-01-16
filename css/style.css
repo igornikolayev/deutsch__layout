@@ -25,7 +25,7 @@ button {
 
 button:hover {
   background: #15c8e0;
-  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
+  background: linear-gradient(to right, #19c6d1 0%, #129bd4 100%);
   border-color: #fff; }
   button:hover p {
     color: #fff; }
@@ -195,7 +195,7 @@ button:hover {
     margin: auto;
     margin-top: 80px;
     background: #15c8e0;
-    background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
+    background: linear-gradient(to right, #19c6d1 0%, #129bd4 100%);
     padding: 10px 25px 10px 35px;
     border: none;
     border-radius: 50px;
@@ -356,7 +356,7 @@ button:hover {
         background: none; }
 
 .describe__button-drag {
-  margin-top: 70px;
+  margin-top: 0px;
   color: #ffffff;
   width: 32%;
   text-align: center;
@@ -364,7 +364,7 @@ button:hover {
   margin-bottom: 20px;
   opacity: 0.3;
   background: #15c8e0;
-  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%); }
+  background: linear-gradient(to right, #19c6d1 0%, #129bd4 100%); }
   .describe__button-drag p {
     margin: 0; }
   .describe__button-drag:after {
@@ -417,12 +417,12 @@ button:hover {
     font-family: 'Ubuntu';
     font-weight: normal; }
     .contact__fields input:hover {
-      border: 1px solid #6d6d6d; }
+      border: 1px solid #e8e8e8; }
     .contact__fields input:focus {
       border: 1px solid #16b9d2; }
 
 .button-form {
-  margin-top: 80px;
+  margin-top: 0px;
   padding-left: 60px;
   padding-right: 60px;
   width: 420px;
@@ -433,7 +433,7 @@ button:hover {
   margin: auto;
   margin-top: 10px;
   background: #15c8e0;
-  background: linear-gradient(to right, #15c8e0 0%, #15b2d3 100%);
+  background: linear-gradient(to right, #19c6d1 0%, #129bd4 100%);
   padding: 10px 100px;
   border: none;
   border-radius: 50px; }
@@ -494,6 +494,35 @@ button:hover {
     margin-bottom: 50px; }
   .main__field__out h5 {
     font-size: 14px; }
+
+.Site {
+  min-height: 100vh;
+  padding-bottom: 240px; }
+
+.Site-form {
+  padding-bottom: 150px; }
+
+.footer-fixed {
+  padding-top: 45px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 -3px 5px -5px #c7b9c7; }
+  .footer-fixed__text {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 35px;
+    font-family: 'Open Sans';
+    color: #727272;
+    font-size: 13px;
+    margin-bottom: 10px; }
+  .footer-fixed__back {
+    font-family: 'Open Sans';
+    color: #727272;
+    font-size: 13px;
+    text-decoration: none; }
 
 @media screen and (max-width: 1024px) {
   .container {

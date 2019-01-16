@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <title>agenturro|Form</title>
 </head>
 
-<body>
+<body class="Site Site-form">
     <div class="logo">
         <img src="img/logo.png" alt="logo">
     </div>
@@ -46,22 +47,38 @@
                     </div>
                 </form>
             </div>
-            <button id="buttonToformDanke" class="describe__button describe__button-drag button-form " onclick="location.href='danke.html';"
-                disabled>
-                <p> Stundeneinschätzung bekommen</p>
-            </button>
-            <a class="main__link-back" href="drugdrop.html">Zurück</a>
+           
         </div>
     </main>
-    <footer class="footer footer-file">
-        <p>Impressum</p>
+    <footer class="footer-fixed ">
+    	 <button id="buttonToformDanke" class="describe__button describe__button-drag button-form " onclick="location.href='danke.html';"
+            disabled>
+            <p> Stundeneinschätzung bekommen</p>
+        </button>
+		<a class="footer-fixed__back " href="drugdrop.html">Zurück</a>
+        <p class="footer-fixed__text">Impressum</p>
     </footer>
     <script>
         function ar() {
             const inputs1 = document.getElementById('contact__input-1').value;
             const inputs2 = document.getElementById('contact__input-2').value;
             const inputs3 = document.getElementById('contact__input-3').value;
+            const input1 = document.getElementById('contact__input-1');
+            const input2 = document.getElementById('contact__input-2');
+            const input3 = document.getElementById('contact__input-3');
             const but = document.getElementById('buttonToformDanke');
+            input1.addEventListener("keyup", function(event) {
+				  event.preventDefault();
+				  if (event.keyCode === 13) {
+				  	document.getElementById('contact__input-2').select();
+				  }
+				});
+                input2.addEventListener("keyup", function(event) {
+                  event.preventDefault();
+                  if (event.keyCode === 13) {
+                    document.getElementById('contact__input-3').select();   
+                  }
+                });
             if (inputs1 != '') {
                 if (inputs2 != '') {
                     if (inputs3 != '') {
@@ -69,15 +86,15 @@
                         but.style.opacity = "1";
                     } else {
                         but.disabled = true;
-                        but.style.opacity = "0.2";
+                        but.style.opacity = "0.3";
                     }
                 } else {
                     but.disabled = true;
-                    but.style.opacity = "0.2";
+                    but.style.opacity = "0.3";
                 }
             } else {
                 but.disabled = true;
-                but.style.opacity = "0.2";
+                but.style.opacity = "0.3";
             }
         }
     </script>
