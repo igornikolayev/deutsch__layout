@@ -67,7 +67,7 @@
 							<img src="img/plus-blue.png" alt="">
 						</button>
 					</div>
-					<div class="main__url__field" v-for="(item, i) in inputUrl" :key="item.id">
+					<div class="main__url__field" v-for="(item, i) in inputUrl.slice().reverse()" :key="item.id">
 						<a :href="`${item}`">{{item}}</a>
 						<div class=" main__url__field__img">
 						</div>
