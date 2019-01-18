@@ -717,6 +717,10 @@ button:hover {
     .header__text {
       font-size: 26px;
       margin-bottom: 10px; }
+  .header__proposition__list__item {
+    width: 90%;
+    max-width: 280px;
+    min-width: 180px; }
   .header-text-container img {
     width: 24px;
     height: 17px; }
@@ -728,11 +732,11 @@ button:hover {
   .main__content {
     margin-top: 60px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center; }
     .main__content:nth-child(2) {
-      flex-direction: column; }
+      flex-direction: column-reverse; }
   .main__content__article {
     margin-top: 40px;
     width: 100%; }
@@ -749,10 +753,10 @@ button:hover {
   .main__content__article__button {
     background: #fff;
     padding: 10px 20px;
-    max-width: 230px;
     width: 100%;
+    max-width: 340px;
+    min-width: 280px;
     position: relative;
-    top: 290px;
     margin-left: auto;
     margin-right: auto; }
     .main__content__article__button p {
@@ -761,11 +765,10 @@ button:hover {
       font-family: "Avenir medium ";
       color: #16b9d2; }
   .main__content__article__button:hover:after {
-    margin-left: 90px; }
+    margin-left: 58%; }
   .main__content__image {
     width: 100%;
-    position: relative;
-    top: -50px; }
+    position: relative; }
     .main__content__image img {
       max-width: 100%; }
   .describe {
@@ -777,10 +780,16 @@ button:hover {
     .describe p {
       margin-top: 50px;
       font-size: 18px; }
-    .describe__button p {
-      font-size: 18px;
-      font-family: "Avenir medium";
-      margin: 0; }
+    .describe__button {
+      width: 100%;
+      max-width: 400px;
+      min-width: 200px; }
+      .describe__button p {
+        font-size: 18px;
+        font-family: "Avenir medium";
+        margin: 0; }
+  .describe__button:hover:after {
+    margin-left: 40px; }
   .footer {
     margin-top: 120px;
     font-size: 13px; }
@@ -830,7 +839,8 @@ button:hover {
         padding-left: 40px;
         font-size: 14px;
         color: #494949;
-        width: 200px;
+        width: 90%;
+        max-width: 90%;
         border-radius: 15px;
         border: 1px solid #e8e8e8;
         text-decoration: none;
@@ -883,4 +893,17 @@ button:hover {
     margin-top: 145px;
     margin-bottom: 0; }
   .main__link-back {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .header__proposition__text {
+    position: relative;
+    top: -30px;
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 340px) {
+  .main__content__article__button:hover:after {
+    margin-left: 50%; }
+  .describe__button:hover:after {
+    margin-left: 0px; }
+  .describe__button:after {
+    margin: 0px;
+    padding: 0px; } }
