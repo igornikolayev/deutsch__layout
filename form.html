@@ -13,7 +13,7 @@
 
 <body class="Site Site-form">
     <div class="logo">
-        <img src="img/logo.png" alt="logo">
+        <img src="img/agenturro-logo_0.svg" alt="logo">
     </div>
     <div class="header">
         <div class="container">
@@ -47,15 +47,15 @@
                     </div>
                 </form>
             </div>
-           
+
         </div>
     </main>
     <footer class="footer-fixed ">
-    	 <button id="buttonToformDanke" class="describe__button describe__button-drag button-form " onclick="location.href='danke.html';"
+        <button id="buttonToformDanke" class="describe__button describe__button-drag button-form " onclick="location.href='danke.html';"
             disabled>
             <p> Stundeneinschätzung bekommen</p>
         </button>
-		<a class="footer-fixed__back " href="drugdrop.html">Zurück</a>
+        <a class="footer-fixed__back " href="drugdrop.html">Zurück</a>
         <p class="footer-fixed__text">Impressum</p>
     </footer>
     <script>
@@ -67,18 +67,18 @@
             const input2 = document.getElementById('contact__input-2');
             const input3 = document.getElementById('contact__input-3');
             const but = document.getElementById('buttonToformDanke');
-            input1.addEventListener("keyup", function(event) {
-				  event.preventDefault();
-				  if (event.keyCode === 13) {
-				  	document.getElementById('contact__input-2').select();
-				  }
-				});
-                input2.addEventListener("keyup", function(event) {
-                  event.preventDefault();
-                  if (event.keyCode === 13) {
-                    document.getElementById('contact__input-3').select();   
-                  }
-                });
+            input1.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById('contact__input-2').select();
+                }
+            });
+            input2.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById('contact__input-3').select();
+                }
+            });
             if (inputs1 != '') {
                 if (inputs2 != '') {
                     if (inputs3 != '') {
